@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="diagram02" name="Page-1">
+    <mxGraphModel dx="550" dy="301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="40" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="task1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;" value="Take the customer order" vertex="1">
+          <mxGeometry height="90" width="150" x="130" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="task2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;" value="Run the credit check" vertex="1">
+          <mxGeometry height="90" width="150" x="320" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Credit approved?" vertex="1">
+          <mxGeometry height="90" width="100" x="520" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="ship" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;" value="Ship the goods" vertex="1">
+          <mxGeometry height="80" width="140" x="680" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="record" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;" value="Record the order" vertex="1">
+          <mxGeometry height="80" width="140" x="860" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="endApproved" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1030" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;" value="Reject the order" vertex="1">
+          <mxGeometry height="80" width="140" x="680" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="endRejected" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="860" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="task1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="task1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="task2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="task2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="gateway" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="ship" value="approved">
+          <mxGeometry relative="1" x="0.6098" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="record" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="record" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="endApproved" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="reject" value="rejected">
+          <mxGeometry relative="1" x="0.5349" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="reject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="endRejected" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
